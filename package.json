@@ -1,0 +1,24 @@
+{
+  "name": "task",
+  "version": "1.0.0",
+  "description": "E-Commerce Platform",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "VenkataSainath",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.3.3",
+    "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "axios": "^1.4.0",
+    "jest": "^29.6.1"
+  }
+}
