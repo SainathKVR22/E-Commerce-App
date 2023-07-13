@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "c7d54b3a-6665-4027-be11-7e28687bfe01",
+		"name": "E-Commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11614338"
+	},
+	"item": [
+		{
+			"name": "Create API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Laptop\",\r\n  \"description\": \"Powerful and lightweight laptop\",\r\n  \"price\": 999.99,\r\n  \"variants\": [\r\n    {\r\n      \"name\": \"Variant 1\",\r\n      \"sku\": \"LP-V1\",\r\n      \"additionalCost\": 0,\r\n      \"stockCount\": 10\r\n    },\r\n    {\r\n      \"name\": \"Variant 2\",\r\n      \"sku\": \"LP-V2\",\r\n      \"additionalCost\": 100,\r\n      \"stockCount\": 5\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Laptop\",\r\n  \"description\": \"Powerful and lightweight laptop\",\r\n  \"price\": 999.99,\r\n  \"variants\": [\r\n    {\r\n      \"name\": \"Variant 1\",\r\n      \"sku\": \"LP-V1\",\r\n      \"additionalCost\": 0,\r\n      \"stockCount\": 10\r\n    },\r\n    {\r\n      \"name\": \"Variant 2\",\r\n      \"sku\": \"LP-V2\",\r\n      \"additionalCost\": 100,\r\n      \"stockCount\": 5\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "341"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"155-hGiK7GI9nKyv27tAsYs4weFE04o\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 13 Jul 2023 14:20:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Laptop\",\n    \"description\": \"Powerful and lightweight laptop\",\n    \"price\": 999.99,\n    \"variants\": [\n        {\n            \"name\": \"Variant 1\",\n            \"sku\": \"LP-V1\",\n            \"additionalCost\": 0,\n            \"stockCount\": 10,\n            \"_id\": \"64b008160a2f65d9e566d73c\"\n        },\n        {\n            \"name\": \"Variant 2\",\n            \"sku\": \"LP-V2\",\n            \"additionalCost\": 100,\n            \"stockCount\": 5,\n            \"_id\": \"64b008160a2f65d9e566d73d\"\n        }\n    ],\n    \"_id\": \"64b008160a2f65d9e566d73b\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Product by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getProductDetails?id=64aef93deb9fb4006d87ae53",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getProductDetails"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "64aef93deb9fb4006d87ae53"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/getProductDetails?id=64aef93deb9fb4006d87ae53",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"getProductDetails"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "64aef93deb9fb4006d87ae53"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "341"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"155-b48y8f1ZrPnCtRye4tN98QC074M\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 13 Jul 2023 14:20:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"64aef93deb9fb4006d87ae53\",\n    \"name\": \"Watch\",\n    \"description\": \"Waterproof sports watch\",\n    \"price\": 149.99,\n    \"variants\": [\n        {\n            \"name\": \"Black Strap\",\n            \"sku\": \"WT-001-BK\",\n            \"additionalCost\": 0,\n            \"stockCount\": 30,\n            \"_id\": \"64aef93deb9fb4006d87ae54\"\n        },\n        {\n            \"name\": \"Red Strap\",\n            \"sku\": \"WT-001-RD\",\n            \"additionalCost\": 0,\n            \"stockCount\": 20,\n            \"_id\": \"64aef93deb9fb4006d87ae56\"\n        }\n    ],\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Update variants",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": \"64af5e3d9498c309685778df\",\r\n    \"variantUpdates\": [\r\n        {\r\n            \"name\": \"Variant 7\",\r\n            \"sku\": \"LP-V1\",\r\n            \"additionalCost\": 20,\r\n            \"stockCount\": 30,\r\n            \"_id\": \"64af5e3d9498c309685778e0\"\r\n        },\r\n        {\r\n            \"name\": \"Variant 8\",\r\n            \"sku\": \"LP-V1\",\r\n            \"additionalCost\": 20,\r\n            \"stockCount\": 30,\r\n            \"_id\": \"64af5e3d9498c309685778e1\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/update/variants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update",
+						"variants"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update variants",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"64af5e3d9498c309685778df\",\r\n    \"variantUpdates\": [\r\n        {\r\n            \"name\": \"Variant 7\",\r\n            \"sku\": \"LP-V1\",\r\n            \"additionalCost\": 20,\r\n            \"stockCount\": 30,\r\n            \"_id\": \"64af5e3d9498c309685778e0\"\r\n        },\r\n        {\r\n            \"name\": \"Variant 8\",\r\n            \"sku\": \"LP-V1\",\r\n            \"additionalCost\": 20,\r\n            \"stockCount\": 30,\r\n            \"_id\": \"64af5e3d9498c309685778e1\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/update/variants",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"update",
+								"variants"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "263"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"107-gHvLFuGNZU7IVW7JM4PZKR6BxKk\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 13 Jul 2023 14:21:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Variants updated successfully\",\n    \"product\": [\n        {\n            \"name\": \"Variant 7\",\n            \"sku\": \"LP-V1\",\n            \"additionalCost\": 20,\n            \"stockCount\": 30,\n            \"_id\": \"64af5e3d9498c309685778e0\"\n        },\n        {\n            \"name\": \"Variant 8\",\n            \"sku\": \"LP-V1\",\n            \"additionalCost\": 20,\n            \"stockCount\": 30,\n            \"_id\": \"64af5e3d9498c309685778e1\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete variants",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/delete/product/variants?productId= \"64af5eaf4365e31e03c6003e\"&flag=false",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delete",
+						"product",
+						"variants"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": " \"64af5eaf4365e31e03c6003e\""
+						},
+						{
+							"key": "variantIds",
+							"value": " [\"64af3f3336e8f4ef1e6c009a\"]",
+							"disabled": true
+						},
+						{
+							"key": "flag",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete variants",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/delete/product/variants?productId= \"64af5eaf4365e31e03c6003e\"&flag=false",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"delete",
+								"product",
+								"variants"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": " \"64af5eaf4365e31e03c6003e\""
+								},
+								{
+									"key": "variantIds",
+									"value": " [\"64af3f3336e8f4ef1e6c009a\"]",
+									"disabled": true
+								},
+								{
+									"key": "flag",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-a+2htZNpkCDaj0ausIFBiheaYZ4\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 13 Jul 2023 14:22:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Product deleted successfully\"\n}"
+				}
+			]
+		}
+	]
+}
